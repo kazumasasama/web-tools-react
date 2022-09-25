@@ -6,7 +6,7 @@ function Home() {
     <div>
       <h1>HOME</h1>
       <Message
-        message="Kaz"
+        message="There"
       />
     </div>
   )
