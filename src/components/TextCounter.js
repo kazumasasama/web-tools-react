@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {Card, Form, FloatingLabel} from 'react-bootstrap';
-import InputGroup from 'react-bootstrap/InputGroup';
+// import InputGroup from 'react-bootstrap/InputGroup';
 
 function TextCounter() {
   const [text, setText] = React.useState('')
@@ -12,7 +12,9 @@ function TextCounter() {
     <div>
       <Card>
         <Card.Body>
-          <Card.Title>文字数カウンター</Card.Title>
+          <Card.Title>
+            <h1>Text Counter</h1>
+          </Card.Title>
           <Form>
             <FloatingLabel controlId="floatingTextarea2" label="Write something here">
               <Form.Control
@@ -23,13 +25,13 @@ function TextCounter() {
               />
             </FloatingLabel>
           </Form>
-          <Card.Text>{text.length}</Card.Text>
+          <Card.Text className='result-number'>{text.length}</Card.Text>
           {/* <TextField
             className='text-counter'
             value={input1}
             onChange={event => setInput1(event.target.value)}
             placeholder='Enter text here'
-            multiline
+            multiline890-=
             rows={3}
             color='info'
           /> */}

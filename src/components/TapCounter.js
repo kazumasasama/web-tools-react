@@ -11,10 +11,10 @@ function TapCounter() {
   return (
     <Card>
       <Card.Body>
-        <Card.Title>Tap Counter</Card.Title>
+        <Card.Title><h1>Tap Counter</h1></Card.Title>
         <div className='d-flex justify-content-evenly'>
-          <Button variant='primary' onClick={handlePlus}>Count++</Button>
-          <Card.Title>{count}</Card.Title>
+          <Button variant='primary' onClick={handlePlus}>Tap Me</Button>
+          <Card.Text className='result-number'>{count}</Card.Text>
         </div>
       </Card.Body>
     </Card>
