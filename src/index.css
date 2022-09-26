@@ -1,3 +1,6 @@
+body {
+  background: linear-gradient(-135deg, #E4A972, #9941D8);
+}
 li {
   list-style: none;
   color: brown;
@@ -7,4 +10,8 @@ li {
 }
 .btn-outline-secondary {
   background-color: white;
+}
+.plus-icon {
+  margin-top: 2px;
+  font-size: 30px;
 }
