@@ -29,7 +29,7 @@ function SecTimer() {
 
   return (
     <div>
-      <Card>
+      <Card className="function-container">
         <Card.Body>
           <Card.Title><h1>Sec Timer</h1></Card.Title>
             <Form className='mb-4'>

@@ -9,7 +9,7 @@ function TapCounter() {
   }
 
   return (
-    <Card>
+    <Card className="function-container">
       <Card.Body>
         <Card.Title><h1>Tap Counter</h1></Card.Title>
         <div className='d-flex justify-content-evenly'>

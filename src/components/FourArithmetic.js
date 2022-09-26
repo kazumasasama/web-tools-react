@@ -13,7 +13,7 @@ function FourArithmetic() {
 
   return (
     <div>
-      <Card>
+      <Card className="function-container">
         <Card.Body>
           <Card.Title><h1>Addition</h1></Card.Title>
           <Form className="d-flex justify-content-evenly">
@@ -43,7 +43,7 @@ function FourArithmetic() {
           </Form>
         </Card.Body>
       </Card>
-      <Card>
+      <Card className="function-container">
         <Card.Body>
           <Card.Title><h1>Subtraction</h1></Card.Title>
           <Form className="d-flex justify-content-evenly">
@@ -73,7 +73,7 @@ function FourArithmetic() {
           </Form>
         </Card.Body>
       </Card>
-      <Card>
+      <Card className="function-container">
         <Card.Body>
           <Card.Title><h1>Multiplication</h1></Card.Title>
           <Form className="d-flex justify-content-evenly">
@@ -103,7 +103,7 @@ function FourArithmetic() {
           </Form>
         </Card.Body>
       </Card>
-      <Card>
+      <Card className="function-container">
         <Card.Body>
           <Card.Title><h1>Division</h1></Card.Title>
           <Form className="d-flex justify-content-evenly">
