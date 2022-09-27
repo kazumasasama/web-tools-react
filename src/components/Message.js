@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 function Message(props) {
-  const [message, setMessage] = React.useState("What's up?")
+  const [message, setMessage] = React.useState("Yo!")
   return (
     <div>
       <h2>{ message }</h2>
