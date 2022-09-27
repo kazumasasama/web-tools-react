@@ -42,10 +42,10 @@ function SecTimer() {
                 />
               </FloatingLabel>
             </Form>
-            <ButtonGroup size='lg' className='mb-2'>
-              <Button onClick={countDown}>Start</Button>
-              <Button className='btn-outline-secondary' onClick={stop} >Stop</Button>
-              <Button className='btn-danger' onClick={reset} >Reset</Button>
+            <ButtonGroup className='mb-2'>
+              <Button variant="outline-secondary" onClick={countDown}>Start</Button>
+              <Button variant="secondary" onClick={stop} >Stop</Button>
+              <Button variant="dark" onClick={reset} >Reset</Button>
             </ButtonGroup>
           <Card.Text className='result-number'>{ seconds }</Card.Text>
         </Card.Body>
