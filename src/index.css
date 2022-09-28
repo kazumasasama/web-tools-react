@@ -45,3 +45,23 @@ body {
 .dictionary-ol li {
   list-style: disc;
 }
+
+/* react-clock */
+.react-clock__face {
+  background-color: black;
+}
+.react-clock__mark__body {
+  background-color: white;
+}
+.react-clock__hour-hand__body {
+  background-color: white;
+}
+.react-clock__minute-hand__body {
+  background-color: white;
+}
+.react-clock__hand__body react-clock__second-hand__body {
+  background-color: red;
+}
+.react-clock__mark__number {
+  color: rgb(150, 150, 150);
+}

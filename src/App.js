@@ -8,6 +8,7 @@ import Timer from './Timer';
 import Calculator from './Calculator';
 import Generator from './Generator';
 import Dictionary from './Dictionary';
+import WorldClock from './WorldClock';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path='/calculator' element={<Calculator />} />
         <Route path='/generator' element={<Generator />} />
         <Route path='/dictionary' element={<Dictionary />} />
+        <Route path='/world-clock' element={<WorldClock />} />
       </Routes>
     </Container>
   );
