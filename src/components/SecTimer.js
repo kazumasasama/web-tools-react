@@ -30,8 +30,10 @@ function SecTimer() {
   return (
     <div>
       <Card className="function-container">
-        <Card.Body>
+        <Card.Header>
           <Card.Title><h1>Sec Timer</h1></Card.Title>
+        </Card.Header>
+        <Card.Body>
             <Form className='mb-4'>
               <FloatingLabel controlId="floatingTextarea2" label="How many seconds?">
                 <Form.Control
@@ -47,8 +49,10 @@ function SecTimer() {
               <Button variant="secondary" onClick={stop} >Stop</Button>
               <Button variant="dark" onClick={reset} >Reset</Button>
             </ButtonGroup>
-          <Card.Text className='result-number'>{ seconds }</Card.Text>
         </Card.Body>
+        <Card.Footer>
+          <Card.Text className='result-number'>{ seconds }</Card.Text>
+        </Card.Footer>
       </Card>
     </div>
   );
