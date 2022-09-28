@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Card, Button, ButtonGroup, Form, FloatingLabel, Col} from 'react-bootstrap';
+import {Card, Button, ButtonGroup, Form, FloatingLabel} from 'react-bootstrap';
 
 function MinTimer() {
   const [seconds, setSeconds] = React.useState('00');

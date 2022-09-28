@@ -1,6 +1,6 @@
 import * as React from 'react'
 import axios from 'axios'
-import {Card, Button, Row, Col, Form, FloatingLabel} from 'react-bootstrap';
+import {Card, Button, Form, FloatingLabel} from 'react-bootstrap';
 
 function DictEng() {
   const [keyword, setKeyword] = React.useState('')
@@ -11,14 +11,13 @@ function DictEng() {
       method: 'GET',
       url: `https://wordsapiv1.p.rapidapi.com/words/${keyword}`,
       headers: {
-        'X-RapidAPI-Key': '939a480754msh6480463041fa01bp12759djsn186aabf26458',
+        'X-RapidAPI-Key': process.env.REACT_APP_WORDS_API,
         'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
       }
     };
 
     axios.request(options)
     .then((res)=> {
-      console.log(res.data.results)
       setDefinitions(res.data.results)
     })
     .catch(function (error) {
