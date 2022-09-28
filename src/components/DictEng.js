@@ -1,6 +1,6 @@
 import * as React from 'react'
 import axios from 'axios'
-import {Card, Button, Row, Col, Form, FloatingLabel} from 'react-bootstrap';
+import {Card, Button, Form, FloatingLabel} from 'react-bootstrap';
 
 function DictEng() {
   const [keyword, setKeyword] = React.useState('')
