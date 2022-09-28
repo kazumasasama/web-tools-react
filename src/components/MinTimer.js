@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Card, Button, ButtonGroup, Form, FloatingLabel} from 'react-bootstrap';
+import {Card, Button, ButtonGroup, Form, FloatingLabel, Col} from 'react-bootstrap';
 
 function MinTimer() {
   const [seconds, setSeconds] = React.useState('00');
@@ -45,11 +45,12 @@ function MinTimer() {
   return (
     <div>
       <Card className="function-container">
-        <Card.Body>
+        <Card.Header>
           <Card.Title><h1>Min Timer</h1></Card.Title>
+        </Card.Header>
+        <Card.Body>
             <Form>
-              <div className='col-sm-6'>
-                <FloatingLabel controlId="floatingTextarea1" label="How many minutes?">
+                <FloatingLabel controlId="floatingTextarea1" label="Minutes">
                   <Form.Control
                     as="input"
                     placeholder="Leave a comment here"
@@ -57,9 +58,7 @@ function MinTimer() {
                     className='mb-3'
                   />
                 </FloatingLabel>
-              </div>
-              <div className='col-sm-6'>
-                <FloatingLabel controlId="floatingTextarea2" label="How many seconds?">
+                <FloatingLabel controlId="floatingTextarea2" label="Seconds">
                   <Form.Control
                     as="input"
                     placeholder="Leave a comment here"
@@ -68,15 +67,16 @@ function MinTimer() {
                     type='number'
                   />
                 </FloatingLabel>
-              </div>
             </Form>
-            <ButtonGroup size='lg'>
-              <Button onClick={countDown}>Start</Button>
-              <Button onClick={stop} className="btn-outline-secondary">Stop</Button>
-              <Button onClick={reset} className="btn-danger">Reset</Button>
+            <ButtonGroup>
+              <Button onClick={countDown} variant="outline-secondary">Start</Button>
+              <Button onClick={stop} variant="secondary">Stop</Button>
+              <Button onClick={reset} variant="dark">Reset</Button>
             </ButtonGroup>
-          <Card.Text className='result-number'>{ minutes }:{ seconds }</Card.Text>
         </Card.Body>
+        <Card.Footer>
+          <Card.Text className='result-number'>{ minutes }:{ seconds }</Card.Text>
+        </Card.Footer>
       </Card>
     </div>
   );

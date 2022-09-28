@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Link } from "react-router-dom";
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 import LiveClock from './LiveClock';
@@ -19,16 +18,22 @@ function Header() {
           <Nav variant='pills' className='me-auto'>
             <Nav.Item as='ul'>
               <LinkContainer to='/'>
-                <Button>Home</Button>
-              </LinkContainer>
+                <Button variant="dark">Home</Button>
+              </LinkContainer>{' '}
               <LinkContainer to='/counter'>
-                <Button>Counter</Button>
-              </LinkContainer>
+                <Button variant="dark">Counter</Button>
+              </LinkContainer>{' '}
               <LinkContainer to='/timer'>
-                <Button>Timer</Button>
-              </LinkContainer>
+                <Button variant="dark">Timer</Button>
+              </LinkContainer>{' '}
               <LinkContainer to='/calculator'>
-                <Button>Calculator</Button>
+                <Button variant="dark">Calculator</Button>
+              </LinkContainer>{' '}
+              <LinkContainer to='/generator'>
+                <Button variant="dark">Generator</Button>
+              </LinkContainer>{' '}
+              <LinkContainer to='/dictionary'>
+                <Button variant="dark">Dictionary</Button>
               </LinkContainer>
             </Nav.Item>
           </Nav>
