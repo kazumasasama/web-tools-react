@@ -15,7 +15,7 @@ function WorldClock() {
   useEffect(() => {
     const Local = setInterval(() => setLocal(moment().format()), 1000);
     const NewYork = setInterval(() => setNewYork(moment().tz('America/New_York').format('HH:mm:ss')), 1000);
-    const LosAngeles = setInterval(() => setNewYork(moment().tz('America/Los_Angeles').format('HH:mm:ss')), 1000);
+    const LosAngeles = setInterval(() => setLos(moment().tz('America/Los_Angeles').format('HH:mm:ss')), 1000);
     const London = setInterval(() => setLondon(moment().tz('Europe/London').format('HH:mm:ss')), 1000);
     const Paris = setInterval(() => setParis(moment().tz('Europe/Paris').format('HH:mm:ss')), 1000);
     const Tokyo = setInterval(() => setTokyo(moment().tz('Asia/Tokyo').format('HH:mm:ss')), 1000);
