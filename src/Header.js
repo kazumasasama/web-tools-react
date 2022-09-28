@@ -34,6 +34,9 @@ function Header() {
               </LinkContainer>{' '}
               <LinkContainer to='/dictionary'>
                 <Button variant="dark">Dictionary</Button>
+              </LinkContainer>{' '}
+              <LinkContainer to='/world-clock'>
+                <Button variant="dark">World Clock</Button>
               </LinkContainer>
             </Nav.Item>
           </Nav>
