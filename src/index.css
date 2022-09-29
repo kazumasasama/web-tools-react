@@ -1,4 +1,4 @@
-html, body, #app, #app>div {
+html, body, #app, #app {
   height: 100%
 }
 body {
@@ -16,8 +16,10 @@ body {
   font-size: 30px;
 }
 .card {
-  background-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border: 3px solid rgba(255, 255, 255, 0.5);
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 .card-header {
   background-color: rgba(255, 255, 255, 0);
@@ -47,21 +49,24 @@ body {
 }
 
 /* react-clock */
-.react-clock__face {
+.day-clock.react-clock__face {
+  background-color: white;
+}
+.night-clock.react-clock__face {
   background-color: black;
 }
-.react-clock__mark__body {
+.night-clock.react-clock__mark__body {
   background-color: white;
 }
-.react-clock__hour-hand__body {
+.night-clock.react-clock__hour-hand__body {
   background-color: white;
 }
-.react-clock__minute-hand__body {
+.night-clock.react-clock__minute-hand__body {
   background-color: white;
 }
-.react-clock__hand__body react-clock__second-hand__body {
+.night-clock.react-clock__hand__body react-clock__second-hand__body {
   background-color: red;
 }
-.react-clock__mark__number {
+.night-clock.react-clock__mark__number {
   color: rgb(150, 150, 150);
 }
