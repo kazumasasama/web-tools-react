@@ -15,7 +15,7 @@ function FourArithmetic() {
     <div>
       <Row>
         <Col sm={6}>
-          <Card className="function-container">
+          <Card className="function-container shadow-lg">
             <Card.Header>
               <Card.Title><h1>Addition</h1></Card.Title>
             </Card.Header>
@@ -48,7 +48,7 @@ function FourArithmetic() {
               <Card.Text className="result-number">{Number(add1) + Number(add2)}</Card.Text>
             </Card.Footer>
           </Card>
-          <Card className="function-container">
+          <Card className="function-container shadow-lg">
             <Card.Header>
               <Card.Title><h1>Subtraction</h1></Card.Title>
             </Card.Header>
@@ -83,7 +83,7 @@ function FourArithmetic() {
           </Card>
         </Col>
         <Col sm={6}>
-          <Card className="function-container">
+          <Card className="function-container shadow-lg">
             <Card.Header>
               <Card.Title><h1>Multiplication</h1></Card.Title>
             </Card.Header>
@@ -116,7 +116,7 @@ function FourArithmetic() {
               <Card.Text className="result-number">{Number(pro1) * Number(pro2)}</Card.Text>
             </Card.Footer>
           </Card>
-          <Card className="function-container">
+          <Card className="function-container shadow-lg">
             <Card.Header>
               <Card.Title><h1>Division</h1></Card.Title>
             </Card.Header>

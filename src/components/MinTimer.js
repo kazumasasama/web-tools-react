@@ -44,7 +44,7 @@ function MinTimer() {
 
   return (
     <div>
-      <Card className="function-container">
+      <Card className="function-container shadow-lg">
         <Card.Header>
           <Card.Title><h1>Min Timer</h1></Card.Title>
         </Card.Header>

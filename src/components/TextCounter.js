@@ -10,7 +10,7 @@ function TextCounter() {
   // }
   return (
     
-    <Card className="function-container">
+    <Card className="function-container shadow-lg">
       <Card.Header>
         <Card.Title><h1>Text Counter</h1></Card.Title>
       </Card.Header>
