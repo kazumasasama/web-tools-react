@@ -3,7 +3,7 @@ import Clock from 'react-clock';
 
 function AnalogClock(props) {
   return (
-    <Card>
+    <Card className='shadow'>
       <Card.Header className='text-center'>
         <Card.Title><h2>{props.title}</h2></Card.Title>
       </Card.Header>

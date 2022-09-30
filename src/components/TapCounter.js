@@ -9,7 +9,7 @@ function TapCounter() {
   }
 
   return (
-    <Card className="function-container"  sm={6}>
+    <Card className="function-container shadow-lg"  sm={6}>
       <Card.Header>
         <Card.Title><h1>Tap Counter</h1></Card.Title>
       </Card.Header>
