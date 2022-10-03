@@ -411,7 +411,7 @@ function WorldClock() {
       clearInterval(Shanghai);
       clearInterval(Tokyo);
     };
-  }, []);
+  }, [bangkok, chicago, denver, local, london, los, moscow, newYork, paris, saoPaulo, shanghai, tokyo]);
 
   return (
     <Row>
