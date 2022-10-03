@@ -1,4 +1,4 @@
-// import * as React from 'react'
+import * as React from 'react'
 import { Container } from 'react-bootstrap';
 import { Routes, Route } from "react-router-dom";
 import Home from './Home';

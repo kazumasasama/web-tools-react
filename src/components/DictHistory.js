@@ -1,3 +1,4 @@
+import React from 'react'
 import {Card, Accordion} from 'react-bootstrap';
 
 function DictHistory(props) {
