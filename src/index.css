@@ -2,7 +2,7 @@ html, body, #app, #app {
   height: 100%
 }
 body {
-  background: linear-gradient(-135deg, #E4A972, #9941D8);
+  background: linear-gradient(-135deg, #3bdcb7d7, #486dc2e7);
   height: 100%;
 }
 .result-number {
@@ -52,6 +52,7 @@ body {
 .day-clock.react-clock__face {
   background-color: white;
 }
+
 .night-clock.react-clock__face {
   background-color: black;
 }
@@ -69,4 +70,16 @@ body {
 }
 .night-clock.react-clock__mark__number {
   color: rgb(150, 150, 150);
+}
+
+.sunrise-clock.react-clock__face {
+  background: linear-gradient(#3655d2, #44abd7, #96fff8e7, rgb(223, 255, 174), white);
+}
+
+.sunset-clock.react-clock__face {
+  background: linear-gradient(rgb(159, 11, 100), #ff2121, #ff701de6, #f7ff1d);
+}
+
+.sunset-sunrise {
+  padding-top: 16px;
 }

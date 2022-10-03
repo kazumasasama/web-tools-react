@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import {Card, Button, Form, FloatingLabel} from 'react-bootstrap';
 
 function DictEng(props) {

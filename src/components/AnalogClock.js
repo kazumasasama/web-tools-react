@@ -1,3 +1,4 @@
+import React from 'react';
 import { Card } from 'react-bootstrap';
 import Clock from 'react-clock';
 
@@ -9,13 +10,23 @@ function AnalogClock(props) {
       </Card.Header>
       <Card.Body className='d-flex justify-content-center'>
         <div id={props.id}>
-          <Card.Title className='text-center'>{props.value.slice(0, -3)}</Card.Title>
+          <Card.Title className='text-center'>{props.value.time.slice(0, -3)}</Card.Title>
           <Clock
-            value={props.value}
+            value={props.value.time}
             renderNumbers
           />
         </div>
       </Card.Body>
+      <Card.Footer className='d-flex justify-content-around sunset-sunrise'>
+        <div className='text-center'>
+          <small>Sunrise</small>
+          <p>{props.value.sunriseSTR}</p>
+        </div>
+        <div className='text-center'>
+          <small>Sunset</small>
+          <p>{props.value.sunsetSTR}</p>
+        </div>
+      </Card.Footer>
     </Card>
   )
 }
