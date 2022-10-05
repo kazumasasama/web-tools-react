@@ -23,32 +23,6 @@ function Dictionary() {
 
     axios.request(options)
     .then((res)=> {
-      setDefinitions(res.data.results);
-      setHistory(history.concat(
-        {
-          title: keyword,
-          definitions: res.data.results,
-        }
-      ))
-      console.log(history)
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-  }
-
-  function getWords() {
-    const options = {
-      method: 'GET',
-      url: `https://wordsapiv1.p.rapidapi.com/words/${keyword}`,
-      headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_WORDS_API,
-        'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
-      }
-    };
-
-    axios.request(options)
-    .then((res)=> {
       const results = res.data.results;
       setDefinitions(results);
       setHistory(history.concat(

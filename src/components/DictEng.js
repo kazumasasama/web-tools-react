@@ -21,8 +21,8 @@ function DictEng(props) {
       </Card.Body>
       {props.definitions.length ? (
         <Card.Footer>
-          <h5 className='dictionary-title'>Definition</h5>
-          <ol className='dictionary-text'>
+          <h5 className='white-text'>Definition</h5>
+          <ol className='white-text'>
             {props.definitions.map((definition, index)=> {
               return (
                 <li key={`definition-${index}`}>
@@ -35,8 +35,8 @@ function DictEng(props) {
       ) : <></>}
       {props.synonyms.length ? (
         <Card.Footer>
-          <h5 className='dictionary-title'>Synonyms</h5>
-          <ol className='dictionary-text'>
+          <h5 className='white-text'>Synonyms</h5>
+          <ol className='white-text'>
             {props.synonyms.map((synonym, index)=> {
               return (
                 <li key={`synonym-${index}`}>
@@ -49,8 +49,8 @@ function DictEng(props) {
       ) : <></>}
       {props.pronunciation ? (
         <Card.Footer>
-          <h5 className='dictionary-title'>Pronunciation</h5>
-          <p className='dictionary-text'>{props.pronunciation}</p>
+          <h5 className='white-text'>Pronunciation</h5>
+          <p className='white-text'>{props.pronunciation}</p>
         </Card.Footer>
       ) : <></>}
     </Card>

@@ -52,13 +52,11 @@ body {
   width: 80px;
   max-width: 100px;
 }
-.dictionary-title {
-  color: white;
-}
-.dictionary-text {
+.white-text {
   list-style: disc;
   color: white;
 }
+
 
 /* react-clock */
 .day-clock.react-clock__face {

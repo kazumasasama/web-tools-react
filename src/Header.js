@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Container, Nav, Navbar, Button, Row, Col } from 'react-bootstrap';
+import { Nav, Navbar, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 import { useLocation } from "react-router-dom";
 import LiveClock from './LiveClock';
@@ -50,6 +50,9 @@ function Header() {
               </LinkContainer>{' '}
               <LinkContainer to='/world-clock'>
                 <Button variant="dark">World Clock</Button>
+              </LinkContainer>{' '}
+              <LinkContainer to='/text'>
+                <Button variant="dark">Text</Button>
               </LinkContainer>
             </Nav.Item>
           </Nav>
