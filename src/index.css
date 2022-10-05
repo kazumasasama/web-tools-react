@@ -16,8 +16,8 @@ body {
   font-size: 30px;
 }
 .card {
-  background: rgba(255, 255, 255, 0.3);
-  border: 3px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+  border: 3px solid rgba(255, 255, 255, 0.7);
   margin-top: 12px;
   margin-bottom: 12px;
 }
@@ -28,6 +28,11 @@ body {
 .card-footer {
   background-color: rgba(255, 255, 255, 0);
   border-top: 3px solid rgba(255, 255, 255, 0.5);
+}
+.home-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home-card {
   max-width: 900px;
@@ -47,8 +52,12 @@ body {
   width: 80px;
   max-width: 100px;
 }
-.dictionary-ol li {
+.dictionary-title {
+  color: white;
+}
+.dictionary-text {
   list-style: disc;
+  color: white;
 }
 
 /* react-clock */
