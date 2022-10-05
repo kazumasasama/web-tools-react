@@ -1,30 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import 'react-clock/dist/Clock.css';
-import * as moment from 'moment-timezone'
+import * as moment from 'moment-timezone';
 import { Row, Col } from 'react-bootstrap';
 import AnalogClock from './components/AnalogClock';
-import SunCalc from 'suncalc'
+import SunCalc from 'suncalc';
 
 function WorldClock() {
 
-  const getCurrentLocation = () => {
-      return new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve, reject)
-      })
-    };
+  const oneTime = useRef(true);
 
-  const LocalTimes = SunCalc.getTimes(moment(), 51.5, -0.1)
-  const LosTimes = SunCalc.getTimes(moment(), 34.05, -118.24)
-  const DenverTimes = SunCalc.getTimes(moment(), 39.74, -104.99)
-  const ChicagoTimes = SunCalc.getTimes(moment(), 41.88, -87.62)
-  const NewYorkTimes = SunCalc.getTimes(moment(), 40.71, -74.00)
-  const SaoPauloTimes = SunCalc.getTimes(moment(), -23.53, -46.62)
-  const LondonTimes = SunCalc.getTimes(moment(), 51.5, -0.1)
-  const ParisTimes = SunCalc.getTimes(moment(), 48.85, 2.35)
-  const MoscowTimes = SunCalc.getTimes(moment(), 55.75, 37.61)
-  const ShanghaiTimes = SunCalc.getTimes(moment(), 31.22, 121.46)
-  const BangkokTimes = SunCalc.getTimes(moment(), 13.73, 100.52)
-  const TokyoTimes = SunCalc.getTimes(moment(), 35.65, 139.83)
+  const [LocalTimes, setLocalTimes] = useState(SunCalc.getTimes(moment(), 51.5, -0.1));
+  const [LosTimes, setLosTimes] = useState(SunCalc.getTimes(moment(), 34.05, -118.24));
+  const [DenverTimes, setDenverTimes] = useState(SunCalc.getTimes(moment(), 39.74, -104.99));
+  const [ChicagoTimes, setChicagoTimes] = useState(SunCalc.getTimes(moment(), 41.88, -87.62));
+  const [NewYorkTimes, setNewYorkTimes] = useState(SunCalc.getTimes(moment(), 40.71, -74.00));
+  const [SaoPauloTimes, setSaoPauloTimes] = useState(SunCalc.getTimes(moment(), -23.53, -46.62));
+  const [LondonTimes, setLondonTimes] = useState(SunCalc.getTimes(moment(), 51.5, -0.1));
+  const [ParisTimes, setParisTimes] = useState(SunCalc.getTimes(moment(), 48.85, 2.35));
+  const [MoscowTimes, setMoscowTimes] = useState(SunCalc.getTimes(moment(), 55.75, 37.61));
+  const [ShanghaiTimes, setShanghaiTimes] = useState(SunCalc.getTimes(moment(), 31.22, 121.46));
+  const [BangkokTimes, setBangkokTimes] = useState(SunCalc.getTimes(moment(), 13.73, 100.52));
+  const [TokyoTimes, setTokyoTimes] = useState(SunCalc.getTimes(moment(), 35.65, 139.83));
 
   const [local, setLocal] = useState(
     {
@@ -38,7 +34,6 @@ function WorldClock() {
       sunsetSTR: moment(LocalTimes.sunset).format('HH:mm')
     }
   );
-
   const [los, setLos] = useState(
     {
       dateTime: moment().tz('America/Los_Angeles').format(),
@@ -51,8 +46,6 @@ function WorldClock() {
       sunsetSTR: moment(LosTimes.sunset).tz('America/Los_Angeles').format('HH:mm')
     }
   );
-
-  
   const [denver, setDenver] = useState(
     {
       dateTime: moment().tz('America/Denver').format(),
@@ -125,7 +118,6 @@ function WorldClock() {
       sunsetSTR: moment(ParisTimes.sunset).tz('Europe/Paris').format('HH:mm')
     }
   );
-
   const [moscow, setMoscow] = useState(
     {
       dateTime: moment().tz('Europe/Moscow').format(),
@@ -137,7 +129,7 @@ function WorldClock() {
       sunset: moment(MoscowTimes.sunset).tz('Europe/Moscow').format(),
       sunsetSTR: moment(MoscowTimes.sunset).tz('Europe/Moscow').format('HH:mm')
     }
-   );
+  );
   const [bangkok, setBangkok] = useState(
     {
       dateTime: moment().tz('Asia/Bangkok').format(),
@@ -176,60 +168,66 @@ function WorldClock() {
   );
 
   useEffect(() => {
-    let LocalTimes
-
-    if (!alert('We would like to use your device location.')) {
-      getCurrentLocation()
-      .then((res)=> {
-        LocalTimes = SunCalc.getTimes(moment(), res.coords.latitude, res.coords.longitude)
+    const getCurrentLocation = () => {
+      return new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject)
       })
-      .catch(err => {
-        alert(err);
-      })
+    };
+    if (navigator.geolocation) {
+      if (oneTime.current === true) {
+        getCurrentLocation()
+        .then((res)=> {
+          setLocalTimes(SunCalc.getTimes(moment(), res.coords.latitude, res.coords.longitude))
+          oneTime.current = false;
+        })
+        .catch(err => {
+          alert(err);
+        })
+      }
     }
-    const LosTimes = SunCalc.getTimes(moment(), 34.05, -118.24)
-    const DenverTimes = SunCalc.getTimes(moment(), 39.74, -104.99)
-    const ChicagoTimes = SunCalc.getTimes(moment(), 41.88, -87.62)
-    const NewYorkTimes = SunCalc.getTimes(moment(), 40.71, -74.00)
-    const SaoPauloTimes = SunCalc.getTimes(moment(), -23.53, -46.62)
-    const LondonTimes = SunCalc.getTimes(moment(), 51.5, -0.1)
-    const ParisTimes = SunCalc.getTimes(moment(), 48.85, 2.35)
-    const MoscowTimes = SunCalc.getTimes(moment(), 55.75, 37.61)
-    const ShanghaiTimes = SunCalc.getTimes(moment(), 31.22, 121.46)
-    const BangkokTimes = SunCalc.getTimes(moment(), 13.73, 100.52)
-    const TokyoTimes = SunCalc.getTimes(moment(), 35.65, 139.83)
+    setLosTimes(SunCalc.getTimes(moment(), 34.05, -118.24));
+    setDenverTimes(SunCalc.getTimes(moment(), 39.74, -104.99));
+    setChicagoTimes(SunCalc.getTimes(moment(), 41.88, -87.62));
+    setNewYorkTimes(SunCalc.getTimes(moment(), 40.71, -74.00));
+    setSaoPauloTimes(SunCalc.getTimes(moment(), -23.53, -46.62));
+    setLondonTimes(SunCalc.getTimes(moment(), 51.5, -0.1));
+    setParisTimes(SunCalc.getTimes(moment(), 48.85, 2.35));
+    setMoscowTimes(SunCalc.getTimes(moment(), 55.75, 37.61));
+    setShanghaiTimes(SunCalc.getTimes(moment(), 31.22, 121.46));
+    setBangkokTimes(SunCalc.getTimes(moment(), 13.73, 100.52));
+    setTokyoTimes(SunCalc.getTimes(moment(), 35.65, 139.83));
 
     function switchFaceColor(elId, city) {
       const element = document.getElementById(elId)
       if (element) {
-        const face = element.children[1].children[0]
-        const hourHand = element.children[1].children[1].children[0]
-        const minuteHand = element.children[1].children[2].children[0]
-        const secondHand = element.children[1].children[3].children[0]
-        const clockMark = element.children[1].children[0]
-        if (city.dateTime > city.sunrise && city.dateTime < city.sunset) {
-          if (city.dateTime < city.sunriseEnd) {
-            face.classList.add('sunrise-clock')
+        const face = element.children[1].children[0];
+        const clockMark = element.children[1].children[0];
+        if (city.dateTime > city.sunriseEnd && city.dateTime < city.sunset) {
+          if (city.dateTime > city.sunrise && city.dateTime < city.sunriseEnd) {
+            face.classList.add('sunrise-clock');
           } else {
-            face.classList.add('day-clock')
+            face.classList.add('day-clock');
           }
         } else {
           if (city.dateTime > city.sunsetStart && city.dateTime < city.sunset) {
-            face.classList.add('sunset-clock')
-          } else {
-            face.classList.add('night-clock')
+            face.classList.add('sunset-clock');
+          } else if (city.dateTime > city.sunriseEnd || city.dateTime < city.sunset) {
+            const hourHand = element.children[1].children[1].children[0];
+            const minuteHand = element.children[1].children[2].children[0];
+            const secondHand = element.children[1].children[3].children[0];
+            face.classList.add('night-clock');
             hourHand.classList.add('night-clock');
             minuteHand.classList.add('night-clock');
             secondHand.classList.add('night-clock');
-            clockMark.children[4].children[0].classList.add('night-clock')
-            let i = 0
-            let j = 0
+            clockMark.children[4].children[0].classList.add('night-clock');
+            let i = 0;
+            let j = 0;
             while (i < clockMark.children.length) {
               while (j < clockMark.children[i].children.length) {
                 clockMark.children[i].children[j].classList.add('night-clock');
                 j++;
               }
-              j = 0
+              j = 0;
               i++;
             }
           }
@@ -393,8 +391,7 @@ function WorldClock() {
         sunsetStart: moment(TokyoTimes.sunsetStart).tz('Asia/Tokyo').format(),
         sunset: moment(TokyoTimes.sunset).tz('Asia/Tokyo').format(),
         sunsetSTR: moment(TokyoTimes.sunset).tz('Asia/Tokyo').format('HH:mm')
-      },
-      switchFaceColor('tokyo-clock', tokyo)
+      }, switchFaceColor('tokyo-clock', tokyo)
     ), 1000);
 
     return () => {
@@ -411,7 +408,7 @@ function WorldClock() {
       clearInterval(Shanghai);
       clearInterval(Tokyo);
     };
-  }, [bangkok, chicago, denver, local, london, los, moscow, newYork, paris, saoPaulo, shanghai, tokyo]);
+  }, []);
 
   return (
     <Row>

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Container } from 'react-bootstrap';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from './Home';
 import Header from './Header';
 import Counter from './Counter';
@@ -11,9 +11,18 @@ import Dictionary from './Dictionary';
 import WorldClock from './WorldClock';
 
 export default function App() {
+
+  let header
+  const location = useLocation();
+  if (location.pathname !== '/') {
+    header = (
+      <Header/>
+    )
+  }
+
   return (
     <Container fluid>
-      <Header/>
+      {header}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/timer' element={<Timer />} />

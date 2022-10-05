@@ -1,18 +1,27 @@
 import * as React from 'react'
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
+import { useLocation } from "react-router-dom";
 import LiveClock from './LiveClock';
 
 
 
 function Header() {
+  let brand
+
+  const location = useLocation();
+  if (location.pathname !== '/') {
+    brand = (
+      <Navbar.Brand href="#home">
+        Web-Tools
+      </Navbar.Brand>
+    )
+  }
 
   return (
     <Navbar expand='lg'>
       <Container>
-        <Navbar.Brand href="#home">
-          Web-Tools
-        </Navbar.Brand>
+        {brand}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav variant='pills' className='me-auto'>
@@ -41,8 +50,8 @@ function Header() {
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
-      </Container>
         <LiveClock/>
+      </Container>
     </Navbar>
   )
 }
