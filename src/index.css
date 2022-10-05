@@ -16,7 +16,7 @@ body {
   font-size: 30px;
 }
 .card {
-  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
   border: 3px solid rgba(255, 255, 255, 0.7);
   margin-top: 12px;
   margin-bottom: 12px;
@@ -55,6 +55,11 @@ body {
 .white-text {
   list-style: disc;
   color: white;
+}
+
+/* Sort */
+#output-btn-container {
+
 }
 
 

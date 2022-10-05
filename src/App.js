@@ -10,6 +10,7 @@ import Generator from './Generator';
 import Dictionary from './Dictionary';
 import WorldClock from './WorldClock';
 import Text from './Text';
+import Sort from './Sort';
 
 export default function App() {
 
@@ -33,6 +34,7 @@ export default function App() {
         <Route path='/dictionary' element={<Dictionary />} />
         <Route path='/world-clock' element={<WorldClock />} />
         <Route path='/text' element={<Text />} />
+        <Route path='/sort' element={<Sort />} />
       </Routes>
     </Container>
   );

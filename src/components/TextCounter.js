@@ -1,13 +1,9 @@
 import * as React from 'react'
 import {Card, Form, FloatingLabel} from 'react-bootstrap';
-// import InputGroup from 'react-bootstrap/InputGroup';
 
 function TextCounter() {
   const [text, setText] = React.useState('')
 
-  // function textLength(input) {
-  //   setText(text = input)
-  // }
   return (
     
     <Card className="function-container shadow-lg">

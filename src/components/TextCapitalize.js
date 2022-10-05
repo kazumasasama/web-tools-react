@@ -4,6 +4,11 @@ import capitalize from '../functions/capitalize';
 
 function TextCapitalize() {
   const [text, setText] = useState('');
+
+  function clearText() {
+    setText('');
+  }
+
   return(
     <Card className='shadow-lg'>
       <Card.Header>
@@ -16,6 +21,7 @@ function TextCapitalize() {
               as="textarea"
               placeholder="Leave a comment here"
               style={{ height: '100px' }}
+              value={text}
               onChange={event => setText(event.target.value)}
             />
           </FloatingLabel>
@@ -27,7 +33,12 @@ function TextCapitalize() {
             <p className='white-text'>{capitalize(text)}</p>
           </Card.Footer>
           <Card.Footer className='d-flex justify-content-end'>
-            <Button variant='dark'>Clear Text</Button>
+            <Button
+              variant='dark'
+              onClick={clearText}
+            >
+              Clear Text
+            </Button>
           </Card.Footer>
         </>
       ) : <></>}

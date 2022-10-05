@@ -53,6 +53,9 @@ function Header() {
               </LinkContainer>{' '}
               <LinkContainer to='/text'>
                 <Button variant="dark">Text</Button>
+              </LinkContainer>{' '}
+              <LinkContainer to='/sort'>
+                <Button variant="dark">Sort</Button>
               </LinkContainer>
             </Nav.Item>
           </Nav>
