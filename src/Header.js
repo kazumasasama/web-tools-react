@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Container, Nav, Navbar, Button } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 import { useLocation } from "react-router-dom";
 import LiveClock from './LiveClock';
@@ -11,16 +11,21 @@ function Header() {
   const location = useLocation();
   if (location.pathname !== '/') {
     brand = (
-      <Navbar.Brand href="#home">
-        Web-Tools
+      <Navbar.Brand>
+        <LinkContainer to='/'>
+          <h1>
+            Web-Tools
+          </h1>
+        </LinkContainer>
       </Navbar.Brand>
     )
   }
 
   return (
-    <Navbar expand='lg'>
-      <Container>
+    <>
+      <Navbar expand='xl'>
         {brand}
+        <LiveClock className="justify-content-end"/>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav variant='pills' className='me-auto'>
@@ -49,9 +54,8 @@ function Header() {
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
-        <LiveClock/>
-      </Container>
-    </Navbar>
+      </Navbar>
+    </>
   )
 }
 
