@@ -8,7 +8,6 @@ import LiveClock from './LiveClock';
 
 function Header() {
   let brand
-
   const location = useLocation();
   if (location.pathname !== '/') {
     brand = (
