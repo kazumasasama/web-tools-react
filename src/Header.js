@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Nav, Navbar, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 import { useLocation } from "react-router-dom";
-import LiveClock from './LiveClock';
+import LiveClock from './components/clock/LiveClock';
 
 
 
@@ -51,8 +51,8 @@ function Header() {
               <LinkContainer to='/world-clock'>
                 <Button variant="dark">World Clock</Button>
               </LinkContainer>{' '}
-              <LinkContainer to='/text'>
-                <Button variant="dark">Text</Button>
+              <LinkContainer to='/format'>
+                <Button variant="dark">Format</Button>
               </LinkContainer>{' '}
               <LinkContainer to='/sort'>
                 <Button variant="dark">Sort</Button>

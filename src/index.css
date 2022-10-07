@@ -57,6 +57,10 @@ body {
   color: white;
 }
 
+/* Sort */
+#download-btn {
+  margin-right: 5px;
+}
 
 /* react-clock */
 .day-clock.react-clock__face {

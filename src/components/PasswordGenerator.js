@@ -83,7 +83,7 @@ function PasswordGenerator() {
                 />
               </FloatingLabel>
             </Col>
-            <Col>
+            <Col className='mb-3'>
               <Form.Check
                 id="alphabets-switch"
                 type="switch"
@@ -109,7 +109,7 @@ function PasswordGenerator() {
                 onChange={event => {handleChange('number', event)}}
               />
             </Col>
-            <Col xxl={12}>
+            <Col xxl={12} className='text-end'>
               <Button
                 variant="dark"
                 onClick={createPassword}

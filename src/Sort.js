@@ -5,7 +5,7 @@ import ListSort from './components/ListSort';
 function Sort() {
   return (
     <Row>
-      <Col sm={6}>
+      <Col lg={6} md={12}>
         <ListSort/>
       </Col>
     </Row>

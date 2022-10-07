@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import {Card, Form, FloatingLabel, Button} from 'react-bootstrap';
-import capitalize from '../functions/capitalize';
+import decapitalize from '../../functions/decapitalize';
 
-function TextCapitalize() {
+function TextDecapitalize() {
   const [text, setText] = useState('');
 
   function clearText() {
@@ -12,7 +12,8 @@ function TextCapitalize() {
   return(
     <Card className='shadow-lg'>
       <Card.Header>
-        <Card.Title><h2>Text Capitalizer</h2></Card.Title>
+        <Card.Title><h2>Text Decapitalizer</h2></Card.Title>
+        <Card.Subtitle>Convert all letters to lower case</Card.Subtitle>
       </Card.Header>
       <Card.Body>
         <Form>
@@ -30,7 +31,7 @@ function TextCapitalize() {
       {text !== '' ? (
         <>
           <Card.Footer>
-            <p className='white-text'>{capitalize(text)}</p>
+            <p className='white-text'>{decapitalize(text)}</p>
           </Card.Footer>
           <Card.Footer className='d-flex justify-content-end'>
             <Button
@@ -46,4 +47,4 @@ function TextCapitalize() {
   )
 }
 
-export default TextCapitalize;
+export default TextDecapitalize;

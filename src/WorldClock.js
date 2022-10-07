@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import 'react-clock/dist/Clock.css';
 import * as moment from 'moment-timezone';
 import { Row, Col } from 'react-bootstrap';
-import AnalogClock from './components/AnalogClock';
+import AnalogClock from './components/clock/AnalogClock';
 import SunCalc from 'suncalc';
 
 function WorldClock() {

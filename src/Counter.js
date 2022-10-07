@@ -1,6 +1,6 @@
 import * as React from 'react'
-import TextCounter from './components/TextCounter';
-import TapCounter from './components/TapCounter';
+import TextCounter from './components/counter/TextCounter';
+import TapCounter from './components/counter/TapCounter';
 import { Row, Col } from 'react-bootstrap';
 
 function Counter() {

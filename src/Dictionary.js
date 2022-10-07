@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Row, Col } from 'react-bootstrap';
-import DictEng from './components/DictEng';
-import DictHistory from './components/DictHistory';
+import DictEng from './components/dictionary/DictEng';
+import DictHistory from './components/dictionary/DictHistory';
 import axios from 'axios';
 
 function Dictionary() {
