@@ -13,16 +13,12 @@ function MinTimer() {
     // }
     let timerId = setInterval(()=> {
       count--;
-      console.log(count);
       if (count % 60 < 10) {
         setSeconds(('00' + (count % 60)).slice(-2));
       } else {
         setSeconds(count % 60)
       }
-      console.log((count % 60))
       setMinutes(Math.floor(count / 60));
-      console.log(Math.floor(count / 60))
-      console.log('======')
       setTimerId(timerId);
       if (count === 0) {
         clearInterval(timerId);

@@ -1,18 +1,31 @@
 import * as React from 'react'
-import { Container, Nav, Navbar, Button } from 'react-bootstrap';
+import { Nav, Navbar, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
+import { useLocation } from "react-router-dom";
 import LiveClock from './LiveClock';
 
 
 
 function Header() {
+  let brand
+  const location = useLocation();
+  if (location.pathname !== '/') {
+    brand = (
+      <Navbar.Brand>
+        <LinkContainer to='/'>
+          <h1>
+            Web-Tools
+          </h1>
+        </LinkContainer>
+      </Navbar.Brand>
+    )
+  }
 
   return (
-    <Navbar expand='lg'>
-      <Container>
-        <Navbar.Brand href="#home">
-          Web-Tools
-        </Navbar.Brand>
+    <>
+      <Navbar expand='xl'>
+        {brand}
+        <LiveClock className="justify-content-end"/>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav variant='pills' className='me-auto'>
@@ -37,13 +50,18 @@ function Header() {
               </LinkContainer>{' '}
               <LinkContainer to='/world-clock'>
                 <Button variant="dark">World Clock</Button>
+              </LinkContainer>{' '}
+              <LinkContainer to='/text'>
+                <Button variant="dark">Text</Button>
+              </LinkContainer>{' '}
+              <LinkContainer to='/sort'>
+                <Button variant="dark">Sort</Button>
               </LinkContainer>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
-      </Container>
-        <LiveClock/>
-    </Navbar>
+      </Navbar>
+    </>
   )
 }
 

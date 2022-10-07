@@ -2,7 +2,7 @@ html, body, #app, #app {
   height: 100%
 }
 body {
-  background: linear-gradient(-135deg, #E4A972, #9941D8);
+  background: conic-gradient(at -30% 30%, #2fcea9d7 18%, #0e0c75e7 28%, #1086bde7 40%);
   height: 100%;
 }
 .result-number {
@@ -16,8 +16,8 @@ body {
   font-size: 30px;
 }
 .card {
-  background: rgba(255, 255, 255, 0.3);
-  border: 3px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+  border: 3px solid rgba(255, 255, 255, 0.7);
   margin-top: 12px;
   margin-bottom: 12px;
 }
@@ -28,6 +28,14 @@ body {
 .card-footer {
   background-color: rgba(255, 255, 255, 0);
   border-top: 3px solid rgba(255, 255, 255, 0.5);
+}
+.home-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-card {
+  max-width: 900px;
 }
 .function-container {
   margin: 16px;
@@ -44,14 +52,17 @@ body {
   width: 80px;
   max-width: 100px;
 }
-.dictionary-ol li {
+.white-text {
   list-style: disc;
+  color: white;
 }
+
 
 /* react-clock */
 .day-clock.react-clock__face {
   background-color: white;
 }
+
 .night-clock.react-clock__face {
   background-color: black;
 }
@@ -69,4 +80,16 @@ body {
 }
 .night-clock.react-clock__mark__number {
   color: rgb(150, 150, 150);
+}
+
+.sunrise-clock.react-clock__face {
+  background: linear-gradient(#3655d2, #44abd7, #96fff8e7, rgb(223, 255, 174), white);
+}
+
+.sunset-clock.react-clock__face {
+  background: linear-gradient(rgb(159, 11, 100), #ff2121, #ff701de6, #f7ff1d);
+}
+
+.sunset-sunrise {
+  padding-top: 16px;
 }

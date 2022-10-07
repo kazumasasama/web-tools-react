@@ -8,6 +8,8 @@ function Dictionary() {
   const [keyword, setKeyword] = useState('')
   const [definitions, setDefinitions] = useState([])
   const [history, setHistory] = useState([])
+  const [synonyms, setSynonyms] = useState([])
+  const [pronunciation, setPronunciation] = useState()
 
   function getWords() {
     const options = {
@@ -21,14 +23,16 @@ function Dictionary() {
 
     axios.request(options)
     .then((res)=> {
-      setDefinitions(res.data.results);
+      const results = res.data.results;
+      setDefinitions(results);
       setHistory(history.concat(
         {
           title: keyword,
-          definitions: res.data.results,
+          definitions: results,
         }
       ))
-      console.log(history)
+      setSynonyms(results[0].synonyms)
+      setPronunciation(res.data.pronunciation.all)
     })
     .catch(function (error) {
       console.error(error);
@@ -50,13 +54,16 @@ function Dictionary() {
           setHistory={setHistory}
           getWords={getWords}
           capitalize={capitalize}
+          synonyms={synonyms}
+          pronunciation={pronunciation}
         />
       </Col>
       <Col sm={6}>
-        {history.length > 0 ? <DictHistory
+        <DictHistory
           history={history}
-        /> : ''
-        }
+          capitalize={capitalize}
+        />
+        {/* {history.length > 0 ? <DictHistory history={history} capitalize={capitalize}/> : ''} */}
       </Col>
     </Row>
   )
