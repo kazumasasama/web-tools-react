@@ -1,12 +1,36 @@
 import { useState } from 'react'
 import {Card, Form, FloatingLabel, Button} from 'react-bootstrap';
-import capitalize from '../../functions/capitalizers';
 
 function Capitalize() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("hi there! enter your text here. i'll capitalize it for you!");
 
   function clearText() {
     setText('');
+  }
+
+  function capitalize(str) {
+    if (typeof str !== 'string' || !str) return str;
+
+    let strArray = str.concat().split('');
+    let indices = [];
+    const elements = ['.', '!', '?', '...'];
+    for (let i in elements) {
+      let idx = strArray.indexOf(elements[i]);
+      while (idx !== -1) {
+        indices.push(idx);
+        idx = strArray.indexOf(elements[i], idx + 1);
+      }
+    }
+    console.log(strArray)
+    console.log(indices)
+
+    strArray[0] = strArray[0].toUpperCase();
+    for (let i in indices) {
+      if (strArray[indices[i] + 2]) {
+        strArray[indices[i] + 2] = strArray[indices[i] + 2].toUpperCase()
+      }
+    }
+    return strArray.join('')
   }
 
   return(

@@ -3,7 +3,7 @@ import {Card, Form, FloatingLabel, Button} from 'react-bootstrap';
 import {capitalizeAll} from '../../functions/capitalizers';
 
 function CapitalizeAll() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("hi there! enter your text here. i'll capitalize it for you!");
 
   return(
     <Card className='shadow-lg'>
