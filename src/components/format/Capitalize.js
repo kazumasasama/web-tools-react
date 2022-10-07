@@ -36,8 +36,8 @@ function Capitalize() {
   return(
     <Card className='shadow-lg'>
       <Card.Header>
-        <Card.Title><h2>Text Capitalizer</h2></Card.Title>
-        <Card.Subtitle>Convert all letters to upper case</Card.Subtitle>
+        <Card.Title><h4>Text Capitalizer</h4></Card.Title>
+        <Card.Subtitle>Convert each first letters of sentences to upper case</Card.Subtitle>
       </Card.Header>
       <Card.Body>
         <Form>

@@ -12,7 +12,7 @@ function TextDecapitalize() {
   return(
     <Card className='shadow-lg'>
       <Card.Header>
-        <Card.Title><h2>Text Decapitalizer</h2></Card.Title>
+        <Card.Title><h4>Text Decapitalizer</h4></Card.Title>
         <Card.Subtitle>Convert all letters to lower case</Card.Subtitle>
       </Card.Header>
       <Card.Body>

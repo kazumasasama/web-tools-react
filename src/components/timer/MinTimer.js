@@ -42,7 +42,7 @@ function MinTimer() {
     <div>
       <Card className="function-container shadow-lg">
         <Card.Header>
-          <Card.Title><h1>Min Timer</h1></Card.Title>
+          <Card.Title><h4>Min Timer</h4></Card.Title>
         </Card.Header>
         <Card.Body>
             <Form>
@@ -65,13 +65,13 @@ function MinTimer() {
                 </FloatingLabel>
             </Form>
             <ButtonGroup>
-              <Button onClick={countDown} variant="outline-secondary">Start</Button>
+              <Button onClick={countDown} variant="light">Start</Button>
               <Button onClick={stop} variant="secondary">Stop</Button>
               <Button onClick={reset} variant="dark">Reset</Button>
             </ButtonGroup>
         </Card.Body>
-        <Card.Footer>
-          <Card.Text className='result-number'>{ minutes }:{ seconds }</Card.Text>
+        <Card.Footer className='text-center'>
+          <Card.Text className='result-number white-text'>{ minutes }:{ seconds }</Card.Text>
         </Card.Footer>
       </Card>
     </div>

@@ -31,7 +31,7 @@ function SecTimer() {
     <div>
       <Card className="function-container shadow-lg">
         <Card.Header>
-          <Card.Title><h1>Sec Timer</h1></Card.Title>
+          <Card.Title><h4>Sec Timer</h4></Card.Title>
         </Card.Header>
         <Card.Body>
             <Form className='mb-4'>
@@ -45,13 +45,13 @@ function SecTimer() {
               </FloatingLabel>
             </Form>
             <ButtonGroup className='mb-2'>
-              <Button variant="outline-secondary" onClick={countDown}>Start</Button>
+              <Button variant="light" onClick={countDown}>Start</Button>
               <Button variant="secondary" onClick={stop} >Stop</Button>
               <Button variant="dark" onClick={reset} >Reset</Button>
             </ButtonGroup>
         </Card.Body>
-        <Card.Footer>
-          <Card.Text className='result-number'>{ seconds }</Card.Text>
+        <Card.Footer className='text-center'>
+          <Card.Text className='result-number white-text'>{ seconds }</Card.Text>
         </Card.Footer>
       </Card>
     </div>

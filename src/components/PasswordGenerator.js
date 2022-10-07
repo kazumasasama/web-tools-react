@@ -68,7 +68,7 @@ function PasswordGenerator() {
   return (
     <Card className='shadow-lg'>
       <Card.Header>
-        <Card.Title><h1>Password Generator</h1></Card.Title>
+        <Card.Title><h4>Password Generator</h4></Card.Title>
       </Card.Header>
       <Card.Body>
         <Form>

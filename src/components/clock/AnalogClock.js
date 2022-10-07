@@ -6,7 +6,7 @@ function AnalogClock(props) {
   return (
     <Card className='shadow'>
       <Card.Header className='text-center'>
-        <Card.Title><h2>{props.title}</h2></Card.Title>
+        <Card.Title><h4>{props.title}</h4></Card.Title>
       </Card.Header>
       <Card.Body className='d-flex justify-content-center'>
         <div id={props.id}>
