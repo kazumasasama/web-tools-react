@@ -5,7 +5,7 @@ function DictEng(props) {
   return(
     <Card className='shadow-lg'>
       <Card.Header>
-        <Card.Title><h2>Dictionary (ENG)</h2></Card.Title>
+        <Card.Title><h4>Dictionary (ENG)</h4></Card.Title>
       </Card.Header>
       <Card.Body>
         <Form.Group className="mb-3">

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Row, Col } from 'react-bootstrap';
-import DictEng from './components/DictEng';
-import DictHistory from './components/DictHistory';
+import DictEng from './components/dictionary/DictEng';
+import DictHistory from './components/dictionary/DictHistory';
 import axios from 'axios';
 
 function Dictionary() {
@@ -29,6 +29,8 @@ function Dictionary() {
         {
           title: keyword,
           definitions: results,
+          synonyms: results[0].synonyms,
+          pronunciation: res.data.pronunciation.all
         }
       ))
       setSynonyms(results[0].synonyms)
@@ -61,9 +63,9 @@ function Dictionary() {
       <Col sm={6}>
         <DictHistory
           history={history}
+          pronunciation={pronunciation}
           capitalize={capitalize}
         />
-        {/* {history.length > 0 ? <DictHistory history={history} capitalize={capitalize}/> : ''} */}
       </Col>
     </Row>
   )

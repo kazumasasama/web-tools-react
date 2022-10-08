@@ -17,7 +17,7 @@ function FourArithmetic() {
         <Col sm={6}>
           <Card className="function-container shadow-lg">
             <Card.Header>
-              <Card.Title><h1>Addition</h1></Card.Title>
+              <Card.Title><h4>Addition</h4></Card.Title>
             </Card.Header>
             <Card.Body>
               <Form className="d-flex justify-content-evenly">
@@ -45,12 +45,12 @@ function FourArithmetic() {
               </Form>
             </Card.Body>
             <Card.Footer className="text-center">
-              <Card.Text className="result-number">{Number(add1) + Number(add2)}</Card.Text>
+              <Card.Text className="result-number white-text">{Number(add1) + Number(add2)}</Card.Text>
             </Card.Footer>
           </Card>
           <Card className="function-container shadow-lg">
             <Card.Header>
-              <Card.Title><h1>Subtraction</h1></Card.Title>
+              <Card.Title><h4>Subtraction</h4></Card.Title>
             </Card.Header>
             <Card.Body>
               <Form className="d-flex justify-content-evenly">
@@ -78,14 +78,14 @@ function FourArithmetic() {
               </Form>
             </Card.Body>
             <Card.Footer className="d-flex justify-content-evenly">
-              <Card.Text className="result-number">{Number(sub1) - Number(sub2)}</Card.Text>
+              <Card.Text className="result-number white-text">{Number(sub1) - Number(sub2)}</Card.Text>
             </Card.Footer>
           </Card>
         </Col>
         <Col sm={6}>
           <Card className="function-container shadow-lg">
             <Card.Header>
-              <Card.Title><h1>Multiplication</h1></Card.Title>
+              <Card.Title><h4>Multiplication</h4></Card.Title>
             </Card.Header>
             <Card.Body>
               <Form className="d-flex justify-content-evenly">
@@ -113,12 +113,12 @@ function FourArithmetic() {
               </Form>
             </Card.Body>
             <Card.Footer className="d-flex justify-content-evenly">
-              <Card.Text className="result-number">{Number(pro1) * Number(pro2)}</Card.Text>
+              <Card.Text className="result-number white-text">{Number(pro1) * Number(pro2)}</Card.Text>
             </Card.Footer>
           </Card>
           <Card className="function-container shadow-lg">
             <Card.Header>
-              <Card.Title><h1>Division</h1></Card.Title>
+              <Card.Title><h4>Division</h4></Card.Title>
             </Card.Header>
             <Card.Body>
               <Form className="d-flex justify-content-evenly">
@@ -146,7 +146,7 @@ function FourArithmetic() {
               </Form>
             </Card.Body>
             <Card.Footer className="d-flex justify-content-evenly">
-              <Card.Text className="result-number">{Number(div1) / Number(div2) || 0}</Card.Text>
+              <Card.Text className="result-number white-text">{Number(div1) / Number(div2) || 0}</Card.Text>
             </Card.Footer>
           </Card>
         </Col>

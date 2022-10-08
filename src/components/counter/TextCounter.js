@@ -8,7 +8,7 @@ function TextCounter() {
     
     <Card className="function-container shadow-lg">
       <Card.Header>
-        <Card.Title><h1>Text Counter</h1></Card.Title>
+        <Card.Title><h4>Text Counter</h4></Card.Title>
       </Card.Header>
       <Card.Body>
         <Form>
@@ -23,7 +23,7 @@ function TextCounter() {
         </Form>
       </Card.Body>
       <Card.Footer>
-        <Card.Text className='text-center result-number'>{text.length}</Card.Text>
+        <Card.Text className='text-center white-text result-number'>{text.length}</Card.Text>
       </Card.Footer>
     </Card>
   )

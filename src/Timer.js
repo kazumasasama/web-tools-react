@@ -1,6 +1,6 @@
 import * as React from 'react'
-import MinTimer from './components/MinTimer.js';
-import SecTimer from './components/SecTimer.js'
+import MinTimer from './components/timer/MinTimer.js';
+import SecTimer from './components/timer/SecTimer.js'
 import { Row, Col } from 'react-bootstrap';
 
 function Timer() {

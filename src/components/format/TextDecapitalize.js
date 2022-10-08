@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import {Card, Form, FloatingLabel, Button} from 'react-bootstrap';
-import decapitalize from '../functions/decapitalize';
+import decapitalize from '../../functions/decapitalize';
 
 function TextDecapitalize() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("HI THERE! ENTER YOUR TEXT HERE. I'LL CAPITALIZE IT FOR YOU!");
 
   function clearText() {
     setText('');
@@ -12,7 +12,8 @@ function TextDecapitalize() {
   return(
     <Card className='shadow-lg'>
       <Card.Header>
-        <Card.Title><h2>Text Decapitalizer</h2></Card.Title>
+        <Card.Title><h4>Text Decapitalizer</h4></Card.Title>
+        <Card.Subtitle>Convert all letters to lower case</Card.Subtitle>
       </Card.Header>
       <Card.Body>
         <Form>

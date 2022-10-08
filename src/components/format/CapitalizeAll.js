@@ -1,18 +1,15 @@
 import { useState } from 'react'
 import {Card, Form, FloatingLabel, Button} from 'react-bootstrap';
-import capitalize from '../functions/capitalize';
+import {capitalizeAll} from '../../functions/capitalizers';
 
-function TextCapitalize() {
-  const [text, setText] = useState('');
-
-  function clearText() {
-    setText('');
-  }
+function CapitalizeAll() {
+  const [text, setText] = useState("hi there! enter your text here. i'll capitalize it for you!");
 
   return(
     <Card className='shadow-lg'>
       <Card.Header>
-        <Card.Title><h2>Text Capitalizer</h2></Card.Title>
+        <Card.Title><h4>Text Capitalizer (ALL)</h4></Card.Title>
+        <Card.Subtitle>Convert all letters to upper case</Card.Subtitle>
       </Card.Header>
       <Card.Body>
         <Form>
@@ -30,12 +27,12 @@ function TextCapitalize() {
       {text !== '' ? (
         <>
           <Card.Footer>
-            <p className='white-text'>{capitalize(text)}</p>
+            <p className='white-text'>{capitalizeAll(text)}</p>
           </Card.Footer>
           <Card.Footer className='d-flex justify-content-end'>
             <Button
               variant='dark'
-              onClick={clearText}
+              onClick={()=> setText('')}
             >
               Clear Text
             </Button>
@@ -46,4 +43,4 @@ function TextCapitalize() {
   )
 }
 
-export default TextCapitalize;
+export default CapitalizeAll;
