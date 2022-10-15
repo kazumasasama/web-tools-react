@@ -3,7 +3,7 @@ import {Card, Form, FloatingLabel, Button} from 'react-bootstrap';
 import decapitalize from '../../functions/decapitalize';
 
 function TextDecapitalize() {
-  const [text, setText] = useState("HI THERE! ENTER YOUR TEXT HERE. I'LL CAPITALIZE IT FOR YOU!");
+  const [text, setText] = useState("HI THERE! ENTER YOUR TEXT HERE. I'LL DECAPITALIZE IT FOR YOU!");
 
   function clearText() {
     setText('');

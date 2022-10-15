@@ -2,9 +2,6 @@ import * as React from 'react'
 import { Nav, Navbar, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 import { useLocation } from "react-router-dom";
-import LiveClock from './components/clock/LiveClock';
-
-
 
 function Header() {
   let brand
@@ -25,7 +22,6 @@ function Header() {
     <>
       <Navbar expand='xl'>
         {brand}
-        <LiveClock className="justify-content-end"/>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav variant='pills' className='me-auto'>

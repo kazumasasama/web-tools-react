@@ -17,7 +17,12 @@ function DictEng(props) {
             />
           </FloatingLabel>
         </Form.Group>
-        <Button variant="dark" onClick={props.getWords}>Look up</Button>
+        <Button
+          variant="dark"
+          onClick={props.getWords}
+        >
+          Look up
+        </Button>
       </Card.Body>
       {props.definitions.length ? (
         <Card.Footer>

@@ -4,19 +4,48 @@ import {Row, Col, Card, Form, FloatingLabel, Button, Dropdown, Overlay, Tooltip}
 function ListSort() {
   const [text, setText] = useState('banana, apple, mango, apple')
   const [sorted, setSorted] = useState('apple, banana, mango')
+  const [divider, setDivider] = useState({divider: ', ', element: null})
+  const [prevDivider, setPrevDivider] = useState(null)
   const [asc, setAsc] = useState(Boolean(true))
   const [duplicated, setDuplicated] = useState(Boolean(true))
   const [show, setShow] = useState(Boolean(false));
   const [count, setCount] = useState(0)
-  const [previousBtn, setPreviousBtn] = useState()
   const target = useRef(null);
 
-  function sort(join, element) {
-    if (count === 0) {
-      document.getElementById('active-btn').classList.remove('active')
-    } else {
-      previousBtn.classList.remove('active')
-    }
+  function setCurrentDivider(join, element) {
+    setPrevDivider(prevDivider)
+    const promise = new Promise((resolve, reject)=> {
+      setPrevDivider(
+        {
+          divider: divider.divider,
+          element: divider.element
+        }
+      );
+      resolve(divider.element)
+    });
+    promise
+    .then((prevEl)=> {
+      if (count === 0) {
+        const el = document.getElementById('active-btn')
+        el.classList.remove('active')
+      } else {
+        prevEl.classList.remove('active')
+      }
+    })
+    .then(()=> {
+      setDivider(
+        {
+          divider: join,
+          element: element
+        }
+      )
+      element.classList.add('active')
+      setCount(count + 1)
+    })
+  }
+
+
+  function sort() {
     if (text.length > 0) {
       let splitted;
       if (text.includes(', ')) {
@@ -38,14 +67,11 @@ function ListSort() {
       }
       if (duplicated) {
         const unique = [...new Set(splitted)]
-        setSorted(unique.join(join))
+        setSorted(unique.join(divider.divider))
       } else {
-        setSorted(splitted.join(join))
+        setSorted(splitted.join(divider.divider))
       }
     }
-    setCount(count + 1)
-    setPreviousBtn(element)
-    element.classList.add('active')
   }
 
   function clearInput() {
@@ -132,44 +158,43 @@ function ListSort() {
               >
                 OUTPUT
               </Button>
-              {' '}
               <Button
                 variant='outline-light'
-                onClick={(event)=> sort(' ', event.target)}
+                onClick={(event)=> setCurrentDivider(' ', event.target)}
+                className='btn-margin-right-5'
               >
                 ( )
               </Button>
-              {' '}
               <Button
                 variant='outline-light'
-                onClick={(event)=> sort(',', event.target)}
+                onClick={(event)=> setCurrentDivider(',', event.target)}
+                className='btn-margin-right-5'
               >
                 ,
               </Button>
-              {' '}
               <Button
                 id="active-btn"
                 variant='outline-light'
-                onClick={(event)=> sort(', ', event.target)}
+                onClick={(event)=> setCurrentDivider(', ', event.target)}
+                className='btn-margin-right-5'
                 active
               >
                 (, )
               </Button>
-              {' '}
               <Button
                 variant='outline-light'
-                onClick={(event)=> sort('/', event.target)}
+                onClick={(event)=> setCurrentDivider('/', event.target)}
+                className='btn-margin-right-5'
               >
                 /
               </Button>
-              {' '}
               <Button
                 variant='outline-light'
-                onClick={(event)=> sort('-', event.target)}
+                onClick={(event)=> setCurrentDivider('-', event.target)}
+                className='btn-margin-right-5'
               >
                 -
               </Button>
-              {' '}
               <Button
                 variant='link'
                 className='white-text'
@@ -177,15 +202,14 @@ function ListSort() {
               >
                 Order
               </Button>
-              {' '}
               <Button
                 variant='outline-light'
                 active={asc}
                 onClick={()=> setAsc(Boolean(true))}
+                className='btn-margin-right-5'
               >
                 ASC
               </Button>
-              {' '}
               <Button
                 variant='outline-light'
                 onClick={()=> setAsc(Boolean(false))}
@@ -196,7 +220,7 @@ function ListSort() {
             </Col>
             <Col xs={12} className='d-flex justify-content-end'>
               <Dropdown ref={target}>
-                <Dropdown.Toggle variant="dark" id='download-btn'>
+                <Dropdown.Toggle variant="dark" className='btn-margin-right-5'>
                   Download
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
@@ -222,8 +246,15 @@ function ListSort() {
               <Button
                 variant='dark'
                 onClick={()=> clearInput()}
+                className='btn-margin-right-5'
               >
                 Clear Form
+              </Button>
+              <Button
+                variant='dark'
+                onClick={sort}
+              >
+                Sort
               </Button>
             </Col>
           </Row>
