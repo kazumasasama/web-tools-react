@@ -21,8 +21,6 @@ function Capitalize() {
         idx = strArray.indexOf(elements[i], idx + 1);
       }
     }
-    console.log(strArray)
-    console.log(indices)
 
     strArray[0] = strArray[0].toUpperCase();
     for (let i in indices) {
@@ -35,7 +33,7 @@ function Capitalize() {
 
   return(
     <Card className='shadow-lg'>
-      <Card.Header>
+      <Card.Header className='text-white'>
         <Card.Title><h4>Text Capitalizer</h4></Card.Title>
         <Card.Subtitle>Convert each first letters of sentences to upper case</Card.Subtitle>
       </Card.Header>

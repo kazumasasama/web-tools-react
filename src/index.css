@@ -2,8 +2,16 @@ html, body, #app, #app {
   height: 100%
 }
 body {
-  background: conic-gradient(at -30% 30%, #2fcea9d7 18%, #0e0c75e7 28%, #1086bde7 40%);
+  background: rgb(34, 43, 69);
   height: 100%;
+}
+.nav-btn-container a {
+  border: 2px solid;
+  border-image: linear-gradient(to left, #ff26fb, #00b3ff);
+  border-image-slice: 1;
+}
+.page-title {
+  font-size: 6rem;
 }
 .result-number {
   font-size: xx-large;
@@ -16,7 +24,7 @@ body {
   font-size: 30px;
 }
 .card {
-  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+  background: rgba(150, 150, 150, 0.4);
   border: 4px solid rgba(255, 255, 255, 1);
   margin-top: 12px;
   margin-bottom: 12px;
@@ -30,11 +38,6 @@ body {
   border-top: 3px solid rgba(255, 255, 255, 0.5);
 }
 .home-card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home-card {
   max-width: 900px;
 }
 .function-container {
@@ -55,6 +58,15 @@ body {
 .white-text {
   list-style: disc;
   color: white;
+}
+.text-pink {
+  color: #ff26fb;
+}
+
+.text-gradation {
+  background: linear-gradient(to left, #ff26fb, #00b3ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Sort */

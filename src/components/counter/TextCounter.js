@@ -8,7 +8,7 @@ function TextCounter() {
     
     <Card className="function-container shadow-lg">
       <Card.Header>
-        <Card.Title><h4>Text Counter</h4></Card.Title>
+        <Card.Title className='text-white'><h4>Text Counter</h4></Card.Title>
       </Card.Header>
       <Card.Body>
         <Form>

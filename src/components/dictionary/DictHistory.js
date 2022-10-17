@@ -8,12 +8,10 @@ function DictHistory(props) {
   //   )})
   // }
 
-  console.log(props.history)
-
   return (
     <Card className='shadow-lg'>
       <Card.Header>
-        <Card.Title><h4>History</h4></Card.Title>
+        <Card.Title className='text-white'><h4>History</h4></Card.Title>
       </Card.Header>
       <Card.Body>
         <Accordion>

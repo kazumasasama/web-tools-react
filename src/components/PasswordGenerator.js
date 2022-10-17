@@ -68,7 +68,7 @@ function PasswordGenerator() {
   return (
     <Card className='shadow-lg'>
       <Card.Header>
-        <Card.Title><h4>Password Generator</h4></Card.Title>
+        <Card.Title className='text-white'><h4>Password Generator</h4></Card.Title>
       </Card.Header>
       <Card.Body>
         <Form>
@@ -83,7 +83,7 @@ function PasswordGenerator() {
                 />
               </FloatingLabel>
             </Col>
-            <Col className='mb-3'>
+            <Col className='mb-3 text-white'>
               <Form.Check
                 id="alphabets-switch"
                 type="switch"

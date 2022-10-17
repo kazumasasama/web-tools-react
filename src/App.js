@@ -11,6 +11,7 @@ import Dictionary from './Dictionary';
 import WorldClock from './WorldClock';
 import Format from './Format';
 import Sort from './Sort';
+import Api from './Api';
 
 export default function App() {
 
@@ -35,6 +36,7 @@ export default function App() {
         <Route path='/world-clock' element={<WorldClock />} />
         <Route path='/format' element={<Format />} />
         <Route path='/sort' element={<Sort />} />
+        <Route path='/api' element={<Api />} />
       </Routes>
     </Container>
   );

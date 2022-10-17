@@ -17,7 +17,7 @@ function FourArithmetic() {
         <Col sm={6}>
           <Card className="function-container shadow-lg">
             <Card.Header>
-              <Card.Title><h4>Addition</h4></Card.Title>
+              <Card.Title className='text-white'><h4>Addition</h4></Card.Title>
             </Card.Header>
             <Card.Body>
               <Form className="d-flex justify-content-evenly">
@@ -31,7 +31,7 @@ function FourArithmetic() {
                     onChange={(event)=> setAdd1(event.target.value)}
                   />
                 </FloatingLabel>
-                <Card.Text className="plus-icon">+</Card.Text>
+                <Card.Text className="plus-icon white-text">+</Card.Text>
                 <FloatingLabel>
                   <Form.Control
                     as="input"
@@ -50,7 +50,7 @@ function FourArithmetic() {
           </Card>
           <Card className="function-container shadow-lg">
             <Card.Header>
-              <Card.Title><h4>Subtraction</h4></Card.Title>
+              <Card.Title className='text-white'><h4>Subtraction</h4></Card.Title>
             </Card.Header>
             <Card.Body>
               <Form className="d-flex justify-content-evenly">
@@ -64,7 +64,7 @@ function FourArithmetic() {
                     onChange={(event)=> setSub1(event.target.value)}
                   />
                 </FloatingLabel>
-                <Card.Text className="plus-icon">-</Card.Text>
+                <Card.Text className="plus-icon white-text">-</Card.Text>
                 <FloatingLabel>
                   <Form.Control
                     as="input"
@@ -85,7 +85,7 @@ function FourArithmetic() {
         <Col sm={6}>
           <Card className="function-container shadow-lg">
             <Card.Header>
-              <Card.Title><h4>Multiplication</h4></Card.Title>
+              <Card.Title className='text-white'><h4>Multiplication</h4></Card.Title>
             </Card.Header>
             <Card.Body>
               <Form className="d-flex justify-content-evenly">
@@ -99,7 +99,7 @@ function FourArithmetic() {
                     onChange={(event)=> setPro1(event.target.value)}
                   />
                 </FloatingLabel>
-                <Card.Text className="plus-icon">{'×'}</Card.Text>
+                <Card.Text className="plus-icon white-text">{'×'}</Card.Text>
                 <FloatingLabel>
                   <Form.Control
                     as="input"
@@ -118,7 +118,7 @@ function FourArithmetic() {
           </Card>
           <Card className="function-container shadow-lg">
             <Card.Header>
-              <Card.Title><h4>Division</h4></Card.Title>
+              <Card.Title className='text-white'><h4>Division</h4></Card.Title>
             </Card.Header>
             <Card.Body>
               <Form className="d-flex justify-content-evenly">
@@ -132,7 +132,7 @@ function FourArithmetic() {
                     onChange={(event)=> setDiv1(event.target.value)}
                   />
                 </FloatingLabel>
-                <Card.Text className="plus-icon">{'÷'}</Card.Text>
+                <Card.Text className="plus-icon white-text">{'÷'}</Card.Text>
                 <FloatingLabel>
                   <Form.Control
                     as="input"

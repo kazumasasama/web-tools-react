@@ -6,18 +6,18 @@ function AnalogClock(props) {
   return (
     <Card className='shadow'>
       <Card.Header className='text-center'>
-        <Card.Title><h4>{props.title}</h4></Card.Title>
+        <Card.Title className='text-white'><h4>{props.title}</h4></Card.Title>
       </Card.Header>
       <Card.Body className='d-flex justify-content-center'>
         <div id={props.id}>
-          <Card.Title className='text-center'>{props.value.time.slice(0, -3)}</Card.Title>
+          <Card.Title className='text-center text-white'>{props.value.time.slice(0, -3)}</Card.Title>
           <Clock
             value={props.value.time}
             renderNumbers
           />
         </div>
       </Card.Body>
-      <Card.Footer className='d-flex justify-content-around sunset-sunrise'>
+      <Card.Footer className='d-flex justify-content-around sunset-sunrise text-white'>
         <div className='text-center'>
           <small>Sunrise</small>
           <p>{props.value.sunriseSTR}</p>

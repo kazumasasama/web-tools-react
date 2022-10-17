@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {Card, Button, ButtonGroup, Form, FloatingLabel} from 'react-bootstrap';
 
-function MinTimer() {
+function Stopwatch() {
   const [seconds, setSeconds] = React.useState('00');
   const [minutes, setMinutes] = React.useState('00');
   const [timerId, setTimerId] = React.useState();
@@ -42,7 +42,7 @@ function MinTimer() {
     <div>
       <Card className="function-container shadow-lg">
         <Card.Header>
-          <Card.Title><h4>Min Timer</h4></Card.Title>
+          <Card.Title className='text-white'><h4>Min Timer</h4></Card.Title>
         </Card.Header>
         <Card.Body>
             <Form>
@@ -78,4 +78,4 @@ function MinTimer() {
   );
 }
 
-export default MinTimer;
+export default Stopwatch;

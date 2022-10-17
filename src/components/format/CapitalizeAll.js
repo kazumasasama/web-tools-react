@@ -7,7 +7,7 @@ function CapitalizeAll() {
 
   return(
     <Card className='shadow-lg'>
-      <Card.Header>
+      <Card.Header className='text-white'>
         <Card.Title><h4>Text Capitalizer (ALL)</h4></Card.Title>
         <Card.Subtitle>Convert all letters to upper case</Card.Subtitle>
       </Card.Header>

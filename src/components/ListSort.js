@@ -102,7 +102,6 @@ function ListSort() {
     } else if (sorted.includes('-')) {
       csvArray.push(',value\r\n,' + sorted.split('-').join('\r\n,'))
     }
-    console.log(csvArray)
     for (let i in csvArray) {
       csvArray[i] += "\r\n"
     }
@@ -121,7 +120,7 @@ function ListSort() {
 
   return (
     <Card>
-      <Card.Header><h2>List Sort</h2></Card.Header>
+      <Card.Header className='text-white'><h2>List Sort</h2></Card.Header>
       <Card.Body>
         <small className='mb-3 white-text'>
           space( ) comma(,) comma & space(, ) slash(/) separated required

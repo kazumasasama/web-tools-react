@@ -11,7 +11,7 @@ function TapCounter() {
   return (
     <Card className="function-container shadow-lg"  sm={6}>
       <Card.Header>
-        <Card.Title><h4>Tap Counter</h4></Card.Title>
+        <Card.Title className='text-white'><h4>Tap Counter</h4></Card.Title>
       </Card.Header>
       <Card.Body>
         <div className='text-center'>
