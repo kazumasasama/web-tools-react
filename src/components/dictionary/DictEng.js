@@ -3,7 +3,7 @@ import {Card, Button, Form, FloatingLabel} from 'react-bootstrap';
 
 function DictEng(props) {
   return(
-    <Card className='shadow-lg'>
+    <Card>
       <Card.Header>
         <Card.Title><h4>Dictionary (ENG)</h4></Card.Title>
       </Card.Header>

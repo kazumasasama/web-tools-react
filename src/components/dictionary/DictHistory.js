@@ -8,8 +8,6 @@ function DictHistory(props) {
   //   )})
   // }
 
-  console.log(props.history)
-
   return (
     <Card className='shadow-lg'>
       <Card.Header>
